@@ -1,0 +1,60 @@
+// html basic
+// ============================================
+html {
+    font-size: calc(10/320*100vw);
+    @include md {
+        font-size: 10px;
+    }
+}
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-family: $base-serif;
+    color: $base;
+    overflow-x: hidden;
+    background-color: #F2F3F4;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+picture {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        @include md {
+            opacity: .8;
+        }
+    }
+}
+
+input, textarea {
+    font-family: $base-serif;
+}
+
+button {
+    cursor: pointer;
+    &:hover {
+        @include md {
+            opacity: .8;
+        }
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+.position-relative {
+    position: relative;
+}

@@ -1,0 +1,195 @@
+.banner {
+    &.elementor-section.elementor-section-boxed {
+        .elementor-container {
+            @include lg {
+                max-width: 160rem;
+            }
+        }
+    }
+    &-right {
+        position: relative;
+    }
+    .qr-wrap {
+        position: absolute;
+        bottom: -15rem;
+        right: 0;
+        z-index: 99;
+        @include md {
+            width: 50rem !important;
+            bottom: -27rem;
+        }
+        @include lg {
+            bottom: -30rem;
+        }
+        @include xl {
+            width: 100% !important;
+        }
+    }
+    &-text {
+        @include mdm {
+            margin-left: auto;
+        }
+    }
+}
+.section {
+    &.elementor-section.elementor-section-boxed {
+        > .elementor-container {
+            @include lg {
+                max-width: 131.2rem;
+            }
+        }
+    }
+}
+.Our-Features {
+    &.elementor-section.elementor-section-boxed {
+        .elementor-container {
+            @include lg {
+                max-width: 137.4rem;
+            }
+        }
+    }
+}
+.flow-card {
+    @include lg {
+        margin: 0 -1.4rem;
+    }
+    .elementor-container {
+        justify-content: center;
+    }
+    .card {
+        position: relative;
+        &:not(:last-child):before {
+            position: absolute;
+            content: '';
+            background: url(../images/arrow.png) no-repeat;
+            background-size: cover;
+            transform: translateX(-50%) rotate(90deg);
+            bottom: -1rem;
+            right: 45%;
+            width: 2.2rem;
+            height: 2.2rem;
+            
+            @include xl {
+                transform: translateY(-50%);
+                top:50%;
+                right: -1.8rem;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+    }
+    .step {
+        position: absolute;
+        @include mdm {
+            right: 0;
+            top: 1rem;
+        }
+        @include xlm {
+            top: 0;
+        }
+        @include xl {
+            right: 3.2rem;
+            bottom: 3.2rem;
+        }
+    }
+    .flow-image {
+        position: absolute;
+        @include mdm {
+            left: 0;
+            top: 6rem;
+        }
+        @include md {
+            right: 2.4rem;
+            top: 5rem;
+        }
+        @include lg {
+            position:unset;
+        }
+    }
+}
+
+.clients {
+    &-slide {
+        max-width: 120rem;
+        width: 100%;
+        margin: 0 auto;
+        @include md {
+            max-width: 80rem;
+        }
+        @media (min-width: 1300px) {
+            max-width: 120rem;
+        }
+        .slick-dots {
+            bottom: -2rem;
+            @include md {
+                bottom: -5rem;
+            }
+            li {
+                width: 2rem;
+                height: 2rem;
+                margin: 0 .2rem;
+                button {
+                    width: 2rem;
+                    height: 2rem;
+                    padding: .5rem;
+                    &:before {
+                        font-size: 1.2rem;
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+        .slick-btn {
+            width: 0.9rem;
+            height: 1.8rem;
+            display: none !important;
+            @include md {
+                display: block !important;
+            }
+            @include lg {
+                width: 1.8rem;
+                height: 3.6rem;
+            }
+            &::before {
+                content: '';
+            }
+            &.next {
+                right: -0.5rem;
+                @include md {
+                    right: -2rem;
+                }
+                @include lg {
+                    right: -4.7rem;
+                }
+            }
+            &.prev {
+                left: -0.5rem;
+                @include md {
+                    left: -2rem;
+                }
+                @include lg {
+                    left: -4.7rem;
+                }
+            }
+        }
+    }
+}
+.feature-card {
+    > div {
+        box-shadow: 0 .4rem .8rem .3rem rgba(0, 0, 0, 0.15), 0 .1rem .3rem rgba(0, 0, 0, 0.3);
+        @include md {
+            box-shadow: 0 1px 8px 3px #00000026, 0 1px 3px rgb(0 0 0 / 30%);
+        }
+    }
+}
+.text {
+    @include mdm {
+        display: none;
+    }
+}
+.btn-more {
+    @include md {
+        display: none;
+    }
+}

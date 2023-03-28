@@ -1,0 +1,68 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    overflow-y: auto;
+    &-content {
+        background-color: $light;
+        border-radius: 1.6rem;
+        margin: 2rem auto;
+        padding: 4rem 2rem;
+        width: 90%;
+        @include lg {
+            margin: 6rem auto;
+            padding: 4rem 3.2rem;
+            width: 52rem;
+        }
+    }
+    &-image {
+        width: 13.2rem;
+        @include lg {
+            width: 26.2rem;
+        }
+    }
+    .group-input {
+        position: relative;
+        img {
+            width: 1.6rem;
+            position: absolute;
+            left: 1.5rem;
+            top: 1.6rem;
+            z-index: 1;
+            @include lg {
+                top: 1.8rem;
+            }
+        }
+        input:focus {
+            outline: none;
+        }
+    }
+    ::placeholder {
+        color: #BFC4C9;
+    }
+    .btn-down {
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+.close {
+    margin-left: 0.75rem;
+    img {
+        width: 1.7rem;
+    }
+}
+
+.close:hover,
+.close:focus {
+    cursor: pointer;
+}
